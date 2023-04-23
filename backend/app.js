@@ -8,7 +8,7 @@ dotenv.config({ path: "./config.env" });
 const AppError = require("./utils/appError");
 // const itemsRoutes = require("./routes/itemRoutes");
 const coursevilleRoutes = require("./routes/coursevilleRoutes");
-
+const dataRoutes = require("./routes/dataRoutes");
 const app = express();
 
 const sessionOptions = {
@@ -33,6 +33,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // app.use("/items", itemsRoutes);
+app.use("/user", dataRoutes);
 app.use("/courseville", coursevilleRoutes);
 app.get("/", (req, res) => {
   res.send("Congratulation. This server is successfully run.");
@@ -40,6 +41,10 @@ app.get("/", (req, res) => {
 
 app.all("*", (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
+});
+
+app.listen(process.env.PORT, () => {
+  console.log(`Server is running on port http://${process.env.backendIPAddress}`);
 });
 
 module.exports = app;
