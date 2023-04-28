@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./global1.css" />
+    <title>Document</title>
+    <title>Three Column Layout</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="large">
+          Let's create your <span class="resume">resume</span>
+        </div>
+        <div class="detail">
+          fill more important informatino about your self
+        </div>
+      </div>
+      <div class="subbody">
+        <div class="left">
+          <div class="leftheader">Your contact information</div>
+          <div class="contactInformation">
+            <div>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Firstname"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                placeholder="Lastname"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                id="nickname"
+                name="nickname"
+                placeholder="Nickname"
+              />
+            </div>
+            <div>
+              <textarea placeholder="Address" id="address"></textarea>
+            </div>
+            <div>
+              <input type="text" id="tel" placeholder="Telephone Number" />
+            </div>
+            <div>
+              <input type="text" id="email" name="email" placeholder="Email" />
+            </div>
+            <div>
+              <input
+                type="text"
+                id="github"
+                name="github"
+                placeholder="github"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                id="linkedin"
+                name="linkedin"
+                placeholder="linkedin"
+              />
+            </div>
+            <div><button id="contact-submit">Submit</button></div>
+          </div>
+          <div class="educationheader">Education</div>
+          <div class="education">
+            <div class="todo-list" id="list"></div>
+          </div>
+          <button id="create">Add Education</button>
+        </div>
+        <div class="mid">
+          <div class="midheader">Technologies and Programming skills</div>
+          <div class="skills">
+            <div class="lang">
+              <span>Languages</span>
+              <div class="lang-container">
+                <div class="tag-lang-container">
+                  <input />
+                </div>
+              </div>
+            </div>
+            <div class="framework">
+              <span>Frameworks</span>
+              <div class="framework-container">
+                <div class="tag-framework-container">
+                  <input />
+                </div>
+              </div>
+            </div>
+            <div class="tools">
+              <span>Tools</span>
+              <div class="tools-container">
+                <div class="tag-tools-container">
+                  <input />
+                </div>
+              </div>
+            </div>
+            <div class="others">
+              <span>Others</span>
+              <div class="others-container">
+                <div class="tag-others-container">
+                  <input />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="midheader">Work Experience</div>
+          <div class="column_container" id="experience">
+            <div class="column_container" id="exp_list"><div class="testt"></div>
+              <div class="testt"></div>
+            </div>
+            <div class="new_exp_box" id="new_exp_box">
+              <div class="in_line" id="new_exp_l1">
+                <input type="text" id="e_title" placeholder="Title" class="in_box e_title"/>
+                <input type="text" id="e_type" placeholder="Employment Type" class="in_box e_type"/>
+              </div>
+              <div class="in_line" id="new_exp_l2"><input type="text" id="e_comname" placeholder="Company name" class="in_box e_comname"/></div>
+              <div class="in_line" id="new_exp_l3">
+                <input type="text" id="e_start" placeholder="Start Year" class="in_box e_start"/>
+                <input type="text" id="e_end" placeholder="End Year" class="in_box e_end"/>
+              </div>
+              <div class="in_line" id="new_exp_l4"><input type="text" id="e_detail" placeholder="Detail..." class="in_box e_detail"/></div>
+              <button id="addexperience" onclick=e_add_button()>Add Experience</button>
+            </div>
+          </div>
+        </div>
+        <div class="right main_column">
+          <div class="rightheader">Projects</div>
+          <div class="column_container" id="project">
+            <div class="column_container" id="existing_project_list"><div class="testt"></div>
+            <div class="testt"></div>
+          </div>
+            <div id="new_project">
+              <div id="new_project_box">
+                
+                <div class="in_line" id="new_project_l1">
+                  <input type="text" id="p_title" placeholder="Title" class="in_box p_title"/>
+                  <input type="text" id="p_year" placeholder="Year" class="in_box p_year"/>
+                </div>
+                <div class="in_line" id="new_project_l2">
+                  <input type="text" id="p_link" placeholder="Link" class="in_box p_link"/>
+                </div>
+                <div class="in_line" id="new_project_l3">
+                  <input type="text" id="p_detail" placeholder="Detail..." class="in_box p_detail"/>
+                </div>
+                <button id="addproject" onclick=p_add_button()>Add Project</button>
+              </div>
+            </div>
+          
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <script src="mid.js"></script>
+  </body>
+</html>
