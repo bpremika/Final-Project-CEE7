@@ -19,11 +19,13 @@ body {
 
 .mid {
   padding: 4px;
-  max-width: 600px;
+  max-width: 1000px;
   width: 100%;
-  gap: 14px;
+  gap: 10px;
   display: flex;
   flex-direction: column;
+
+  
 }
 
 .others-container,
@@ -111,7 +113,7 @@ body {
   align-items: flex-start;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   .subbody {
     flex-direction: column;
   }
@@ -201,10 +203,12 @@ body {
 
 .right {
   width: 100%;
+  max-width: 1000px;
   gap: 14px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  position: relative;
 }
 
 .main {
@@ -387,8 +391,8 @@ body {
   margin-bottom: 0;
 }
 #project{
-  
-  gap:20px;
+  width:100%;
+  gap:10px;
 }
 #existing_project_list{
   gap:12px;
@@ -397,7 +401,7 @@ body {
   
   padding: 4px;
   flex-direction: column;
-  width:500px;
+  width:100%;
   height:128px;
   position: relative;
   display: flex;
@@ -425,7 +429,7 @@ body {
   border: 2px solid rgba(0, 0, 0, 0.5);
   padding: 4px;
   flex-direction: column;
-  width:500px;
+  width:100%;
   height:128px;
   padding-bottom: 5px;
 }
@@ -454,15 +458,17 @@ body {
 }
 
 #experience{
-  gap:20px;
+  gap:10px;
+  width:100%;
 }
 #exp_list{
   gap:12px;
+  width:100%;
 }
 .exp{
   padding: 4px;
   flex-direction: column;
-  width:500px;
+  width:100%;
   height:128px;
   
   display: flex;
@@ -476,7 +482,7 @@ body {
   border: 2px solid rgba(0, 0, 0, 0.5);
   padding: 4px;
   flex-direction: column;
-  width:500px;
+  width:100%;
   height:160px;
   padding-bottom: 5px;
 }
@@ -525,7 +531,7 @@ body {
   border: 2px solid rgba(0, 0, 0, 0.5);
   padding: 4px;
   flex-direction: column;
-  width:500px;
+  width:100%;
   height:128px;
   padding-bottom: 5px;
 }
@@ -535,4 +541,13 @@ body {
   right: 10px;
 
   cursor: pointer;
+}
+#create_button{
+  width:30%;
+  max-width: 150px;
+  height: 40px;
+  left:70%;
+  position: relative;
+  cursor: pointer;
+  background-color:  rgba(255, 232, 116, 1);
 }
