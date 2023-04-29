@@ -6,6 +6,7 @@ const authorizeApplication = () => {
 
 const createResume = async () => {
     await Save();
+    await getData();
     show('resumePage','homePage')
 }
 const getProfileInformation = async () => {
@@ -17,6 +18,7 @@ const getProfileInformation = async () => {
   let data = await res.json();
   console.log(data);
   if (res.status == 200){
+      await FirstTimeDisplay();
       show('homePage','loginPage');
       console.log("successfully logged in");
   }    

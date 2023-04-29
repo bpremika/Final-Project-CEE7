@@ -427,7 +427,6 @@ let user = {
     addTags("others");
     addTags("framework");
   }
-  FirstTimeDisplay();
   
   async function Save() {
     /*  Change this code instead of local storage to database ...*/

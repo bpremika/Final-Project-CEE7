@@ -168,4 +168,3 @@ function appendAllSkill(Skill) {
 // document.addEventListener("DOMContentLoaded", function() {
 //     getData();
 // });
-getData();
