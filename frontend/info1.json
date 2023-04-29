@@ -1,0 +1,102 @@
+{
+  "firstname": "Premika",
+  "lastname": "Yutinatorn",
+  "nickname": "Bow",
+  "address": "Bangkok,Thailand",
+  "tel_no": "0854164500",
+  "email": "premika.yu@gmail.com",
+  "github": "https://github.com/KKhimmoon",
+  "linkedin": "https://www.linkedin.com/",
+  "language_skill": [
+    {
+      "id": "1",
+      "name": "HTML"
+    },
+    {
+      "id": "2",
+      "name": "CSS"
+    },
+    {
+      "id": "3",
+      "name": "Python"
+    }
+  ],
+  "framework_skill": [
+    {
+      "id": "1",
+      "name": "ReactJS"
+    },
+    {
+      "id": "2",
+      "name": "NodeJS"
+    }
+  ],
+  "tools_skill": [
+    {
+      "id": "1",
+      "name": "Git"
+    },
+    {
+      "id": "2",
+      "name": "AWS"
+    }
+  ],
+  "other_skill": [
+    {
+      "id": "1",
+      "name": "Git"
+    },
+    {
+      "id": "2",
+      "name": "AWS"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor",
+      "university_name": "Chulalongkorn University",
+      "field_of_study": "Computer Engineering",
+      "graduation_year": "2003",
+      "start_year": "2000"
+    },
+    {
+      "degree": "Bachelor",
+      "university_name": "Chulalongkorn University",
+      "field_of_study": "Computer Engineering",
+      "graduation_year": "2025",
+      "start_year": "2021"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Harty",
+      "year": "2022",
+      "link": "https://www.youtube.com/",
+      "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aperiam dolorum commodi dolores, similique ratione ipsa delectus nisi enim esse"
+    },
+    {
+      "title": "Harty2",
+      "year": "2022",
+      "link": "https://www.youtube.com/",
+      "detail": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aperiam dolorum commodi dolores, similique ratione ipsa delectus nisi enim esse"
+    }
+  ],
+  "work_experience": [
+    {
+      "title": "Double team1",
+      "employment_type": "Fronted Developer",
+      "company_name": "labaacaa",
+      "start_year": "1999",
+      "end_year": "2000",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aperiam dolorum commodi dolores, similique ratione ipsa delectus nisi enim esse"
+    },
+    {
+      "title": "Double Team",
+      "employment_type": "Part-Time Fronted Developer",
+      "company_name": "labaacaa",
+      "start_year": "1999",
+      "end_year": "2000",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aperiam dolorum commodi dolores, similique ratione ipsa delectus nisi enim esse"
+    }
+  ]
+}

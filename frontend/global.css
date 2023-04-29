@@ -15,19 +15,60 @@ html {
     touch-action: none;
     -ms-touch-action: none;
   }
+  .login-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .login-box{
+    width: 80%;
+    height: 80%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 16px;
   }
-  .title{
+  .description-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .title-highlight{
+    color: #FF8383;
+  }
+  .login-title{
     font-size: 48px;
     margin: 0
   }
-  .section-title{
+  .description{
+    margin: 0;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
   }
-  .section-subtitle{
-    font-size: 14px;
-    font-weight: 300;
+
+  .button{
+    width: 143px;
+    height: 36px;
+    border-radius: 4px;
+    color : #fff;
+    background-color: #FF8383;
+    font-weight: 500;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .button:hover{
+    background-color: #FF6A6A;
+    cursor: pointer;
+  }
+
+  .section-credit{
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
   }

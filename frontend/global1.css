@@ -1,0 +1,536 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+.mid {
+  padding: 4px;
+  max-width: 1000px;
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.others-container,
+.lang-container,
+.framework-container,
+.tools-container {
+  width: 100%;
+  display: flex;
+  padding: 4px;
+  padding-left: 0;
+
+}
+
+.tag-others-container,
+.tag-lang-container,
+.tag-framework-container,
+.tag-tools-container {
+  /* overflow-wrap: break-word; */
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  max-width: 95%;
+}
+
+.tag {
+  max-width: 95%;
+  padding: 4px;
+  position: relative;
+  border: 1px solid #ccc;
+  margin: 4px;
+  /* display: flex; */
+  border-radius: 4px;
+  background-color: #FFE975;
+  align-items: center;
+  cursor: default;
+  word-wrap: break-word;
+  /* overflow-wrap: break-word; */
+  flex-wrap: wrap;  
+}
+
+#skills-input-text {
+  word-wrap: break-word;
+}
+
+
+.tag-others-container input,
+.tag-lang-container input,
+.tag-framework-container input,
+.tag-tools-container input {
+  width: 100%;
+  padding: 4px;
+  border-radius: 4px;
+  border-width: 0;
+  outline-width: 1px;
+  outline-color: rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
+}
+
+.tag i {
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.large {
+  margin:0px;
+  color: black;
+  width: 100%;
+  height: auto;
+  font-size: 28px;
+  font-style: Bold;
+  text-align: left;
+  font-family: IBM Plex Sans Thai;
+  font-weight: 700;
+  line-height: 32.20000076293945px;
+  font-stretch: normal;
+  text-decoration: none;
+
+}
+
+.subbody {
+  gap: 30px;
+  display: flex;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 1100px) {
+  .subbody {
+    flex-direction: column;
+  }
+}
+
+.left {
+  width: 100%;
+  gap: 14px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.contactInformation {
+  width: 100%;
+}
+
+.contactInformation input {
+  box-sizing: border-box;
+  margin: 4px;
+  width: 100%;
+  padding: 4px;
+  border: 4px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  font-family: "Mitr", sans-serif;
+  font-size: 1em;
+}
+
+.contactInformation textarea {
+  box-sizing: border-box;
+  margin: 4px;
+  width: 100%;
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  font-family: "Mitr", sans-serif;
+  font-size: 1em;
+
+}
+
+.content-header{
+  margin: 16px;
+  font-weight: 400;
+  color: black;
+  margin-left: 4px;
+  margin-bottom: 0;
+}
+
+.lang,
+.tools,
+.framework,
+.others {
+  /* width: 100%; */
+  padding: 4px;
+  margin: 2px;
+}
+
+.skills span {
+  font-weight: 200;
+}
+
+.skills {
+  flex: 1;
+  padding: 4px;
+  border: 2px solid;
+  border-radius: 8px;
+  border-color: rgba(0, 0, 0, 0.5);
+
+}
+.right {
+  width: 100%;
+  max-width: 1000px;
+  gap: 14px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.main {
+  width: 100vw;
+  margin: 15px;
+  /* background-color: blue; */
+}
+
+.resume {
+  color: #FF7575;
+}
+
+.detail {
+  color: black;
+  height: auto;
+  text-align: left;
+  font-stretch: normal;
+  font-weight: 300;
+
+}
+
+.education {
+  /* border: 2px solid rgba(0, 0, 0, 0.5); */
+  border-radius: 8px;
+  padding: 4px;
+  width: 100%;
+}
+
+/* .addeducation{
+  border-radius: 4px;
+  border: 2px solid pink;
+  cursor: pointer;
+} */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.todo-list{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin : 0px;
+}
+.show {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  padding: 4px;
+  border-radius: 8px;
+  margin: 0px;
+}
+
+#show-upper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#show-lower {
+  font-size: 14px;
+  display: flex;
+  word-wrap: break-word;
+}
+
+#upper-header {
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+  width: 70%;
+  word-wrap: break-word;
+}
+
+#upper-right {
+  display: flex;
+  right: 0;
+}
+
+#upper-period {
+  margin: 4px;
+}
+
+#edit-button {
+  margin: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.inputbox {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 4px;
+  flex-direction: column;
+}
+
+
+.upper {
+  display: flex;
+}
+
+.middle {
+  display: flex;
+}
+
+#degree {
+  flex: 1;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  height: 100%;
+  margin: 4px;
+}
+
+#university_name {
+  flex: 1;
+  border-radius: 2px solid pink;
+  border-radius: 4px;
+  margin: 4px;
+}
+
+#field_of_study {
+  flex: 1;
+  border-radius: 2px solid pink;
+  border-radius: 4px;
+  margin: 4px;
+}
+
+#Submit,
+#Delete {
+  border-radius: 2px solid pink;
+  border-radius: 4px;
+  margin: 4px;
+  cursor: pointer;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+
+}
+#contact-submit {
+  border-radius: 2px solid pink;
+  border-radius: 4px;
+  margin: 4px;
+  cursor: pointer;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  /* position: absolute;   */
+  /* position: relative; */
+}
+
+#Submit:active,
+#Delete:active,
+#edit-button:active,
+#contact-submit:active {
+  background-color: pink;
+  transform: translateY(1px);
+}
+
+.bottom {
+  display: flex;
+}
+
+#start_year {
+  width: 50%;
+  border-radius: 2px solid pink;
+  border-radius: 4px;
+  margin: 4px;
+}
+
+#graduation_year {
+  width: 50%;
+  border-radius: 2px solid pink;
+  border-radius: 4px;
+  margin: 4px;
+}
+
+#create {
+  padding: 4px;
+  border-radius: 4px;
+  border: 2px solid pink;
+  cursor: pointer;
+}
+
+.column_container{
+  display: flex;
+  flex-direction: column;
+}
+
+#project{
+  width:100%;
+}
+#existing_project_list{
+  gap:12px;
+}
+.existing_project{
+  
+  padding: 4px;
+  flex-direction: column;
+  width:100%;
+  min-height:128px;
+  height:auto;
+  position: relative;
+  display: flex;
+    
+  border-color: rgba(0, 0, 0, 0.5);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 8px;
+    
+}
+.p_info1{
+  font-size: 20px;
+}
+.p_info2{
+  font-size: 16px;
+  align-self: center;
+}
+#addproject{
+  border-radius: 4px;
+  border: 2px solid pink;
+  cursor: pointer;
+  
+}
+#new_project_box{
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 4px;
+  flex-direction: column;
+  width:100%;
+  height:128px;
+  padding-bottom: 5px;
+}
+.in_line{
+  display: flex;
+}
+.in_box{
+  border-color: rgba(0, 0, 0, 0.5);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  padding: 3px;
+  font-size: 12px;
+}
+.p_title{
+  width:50%;
+}
+.p_year{
+  width:50%;
+}
+.p_link{
+  width:100%;
+}
+.p_detail{
+  width:100%;
+  bottom: 0px;
+}
+
+#experience{
+  gap:10px;
+  width:100%;
+}
+#exp_list{
+  gap:12px;
+  width:100%;
+}
+.exp{
+  padding: 4px;
+  flex-direction: column;
+  width:100%;
+  min-height:128px;
+  height:auto;
+  display: flex;
+  position: relative;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 8px;
+}
+.new_exp_box{
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 4px;
+  flex-direction: column;
+  width:100%;
+  height:160px;
+  padding-bottom: 5px;
+}
+.e_title{
+  width:50%;
+}
+.e_type{
+  width:50%;
+}
+.e_comname{
+  width:100%;
+}
+.e_start{
+  width:50%;
+}
+.e_end{
+  width:50%;
+}
+.e_detail{
+  width:100%;
+  
+}
+#addexperience{
+  border-radius: 4px;
+  border: 2px solid pink;
+  cursor: pointer;
+}
+.e_info1{
+  font-weight: 500;
+  font-size: 18px;
+}
+.e_info2{
+  font-size: 14px;
+}
+.e_info3{
+  font-size: 14px;
+  top: 35px;
+  right: 10px;
+  position: absolute;
+}
+.edit_button{
+  border-radius: 4px;
+  border: 2px solid pink;
+  cursor: pointer;
+}
+.p_edit_box{
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 4px;
+  flex-direction: column;
+  width:100%;
+  height:128px;
+  padding-bottom: 5px;
+}
+.editbutton{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  cursor: pointer;
+}
+#create_button{
+  width:30%;
+  max-width: 150px;
+  height: 40px;
+  left:70%;
+  position: relative;
+  cursor: pointer;
+  background-color:  rgba(255, 232, 116, 1);
+}
+
+.createBtn{
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #FFE975;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 8px;
+}
+
+.createBtn:hover{
+  background-color: #FCD922;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 8px;
+}

@@ -43,64 +43,55 @@ function buildUpdateExpression(Item) {
     return { UpdateExpression, ExpressionAttributeValues };
   }
 exports.getUserData = async (req, res) => {
+    const user = req.user;
+    console.log(process.env.aws_userData_table_name)
+    console.log(user);
+    const params = {
+        TableName: process.env.aws_userData_table_name,
+        Key: {
+            "student_id": user.id,
+        },
+        UpdateExpression: "set firstname = :firstname, lastname = :lastname",
+        ExpressionAttributeValues: {
+            ":firstname": user.firstname_en,
+            ":lastname": user.lastname_en,
+        },
+        ReturnValues : "ALL_NEW"
+    }
     try{
-        const profileOptions = {
-            headers: {
-                Authorization: `Bearer ${req.session.token.access_token}`,
-            },
-        };
-        const profileReq = await axios.get("https://www.mycourseville.com/api/v1/public/users/me" ,profileOptions)
-        const user = profileReq.data.user;
-        console.log(process.env.aws_userData_table_name)
-        const params = {
-            TableName: process.env.aws_userData_table_name,
-            Key: {
-                "student_id": user.id,
-            },
-            UpdateExpression: "set firstname = :firstname, lastname = :lastname",
-            ExpressionAttributeValues: {
-                ":firstname": user.firstname_en,
-                ":lastname": user.lastname_en,
-            },
-            ReturnValues : "ALL_NEW"
-        }
-        try{
-            console.log("sending")
-            docClient.send(new UpdateCommand(params)).then((data) => {
-                const userdata = {
-                    "student_id": data.Attributes.student_id,
-                    "firstname": data.Attributes.firstname,
-                    "lastname": data.Attributes.lastname,
-                    "nickname": data.Attributes.nickname ?? '',
-                    "address" : data.Attributes.address ?? '',
-                    "tel_no" : data.Attributes.tel_no ?? '',
-                    "email" : data.Attributes.email ?? '',
-                    "github" : data.Attributes.github ?? '',
-                    "linkedin" : data.Attributes.linkedin ?? '',
-                    "education" : data.Attributes.education ?? [],
-                    "language_skill" : data.Attributes.language_skill ?? [],
-                    "framework_skill" : data.Attributes.framework_skill ?? [],
-                    "tools_skill" : data.Attributes.tools_skill ?? [],
-                    "other_skill" : data.Attributes.other_skill ?? [],
-                    "work_experience" : data.Attributes.work_experience ?? [],
-                    "projects" : data.Attributes.projects ?? [],
-                }
-                console.log("sent");
-                res.status(200).send(userdata);
-            });
-        }catch(err){
-            console.log(err);
-            res.status(502).send('Fail to update user data.');
-        }
+        console.log("sending")
+        docClient.send(new UpdateCommand(params)).then((data) => {
+            const userdata = {
+                "student_id": data.Attributes.student_id,
+                "firstname": data.Attributes.firstname,
+                "lastname": data.Attributes.lastname,
+                "nickname": data.Attributes.nickname ?? '',
+                "address" : data.Attributes.address ?? '',
+                "tel_no" : data.Attributes.tel_no ?? '',
+                "email" : data.Attributes.email ?? '',
+                "github" : data.Attributes.github ?? '',
+                "linkedin" : data.Attributes.linkedin ?? '',
+                "education" : data.Attributes.education ?? [],
+                "language_skill" : data.Attributes.language_skill ?? [],
+                "framework_skill" : data.Attributes.framework_skill ?? [],
+                "tools_skill" : data.Attributes.tools_skill ?? [],
+                "other_skill" : data.Attributes.other_skill ?? [],
+                "work_experience" : data.Attributes.work_experience ?? [],
+                "projects" : data.Attributes.projects ?? [],
+            }
+            console.log("sent");
+            res.status(200).send(userdata);
+        });
     }catch(err){
         console.log(err);
-        res.status(401).send('Unauthorized.');
+        res.status(502).send('Fail to update user data.');
     }
 }
 
 exports.updateUserData = async (req, res) => {
     try{
         const data = req.body;
+        const user = req.user;
         // console.log(process.env.aws_userData_table_name)
         const education = data.education ? data.education.map((item) => {
             return {
@@ -111,7 +102,7 @@ exports.updateUserData = async (req, res) => {
                 "graduation_year" : item.graduation_year ?? ""
             }}) : []
         function skillMap(skill){
-            skill ? skill.map((item) => {
+            return skill ? skill.map((item) => {
                 return {
                     "id" : item.id,
                     "name" : item.name,
@@ -139,8 +130,8 @@ exports.updateUserData = async (req, res) => {
                 "detail" : item.detail ?? "",
             }}) : []
         const Items = {
-                "firstname": data.firstname,
-                "lastname": data.lastname,
+                "firstname": data.firstname ?? user.firstname_en,
+                "lastname": data.lastname ?? user.lastname_en,
                 "nickname": data.nickname,
                 "address": data.address,
                 "tel_no": data.tel_no,
@@ -158,7 +149,7 @@ exports.updateUserData = async (req, res) => {
         const params = {
             TableName: process.env.aws_userData_table_name,
             Key: {
-                "student_id": data.student_id,
+                "student_id": user.id,
             },
             ... buildUpdateExpression(Items),
             ReturnValues : "ALL_NEW"
@@ -201,7 +192,7 @@ exports.getData = async (req, res) => {
         const params = {
             TableName: process.env.aws_userData_table_name,
             Key: {
-                "student_id": req.params.student_id,
+                "student_id": req.user.id,
             }
         }
         try{
