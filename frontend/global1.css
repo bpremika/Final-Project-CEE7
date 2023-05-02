@@ -382,7 +382,7 @@
 }
 .p_info2{
   font-size: 16px;
-  align-self: center;
+  /* align-self: center; */
 }
 #addproject{
   border-radius: 4px;
