@@ -378,16 +378,26 @@
     
 }
 .p_info1{
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 18px;;
 }
 .p_info2{
+  font-weight: 300;
   font-size: 16px;
   /* align-self: center; */
 }
+.addbtn{
+  border-radius: 4px;
+  border: 2px solid black;
+  cursor: pointer;
+  background-color: #FF7575;
+}
+
 #addproject{
   border-radius: 4px;
-  border: 2px solid pink;
+  border: 2px solid black;
   cursor: pointer;
+  background-color: #FF7575;
   
 }
 #new_project_box{
