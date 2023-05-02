@@ -204,12 +204,6 @@
   width: 100%;
 }
 
-/* .addeducation{
-  border-radius: 4px;
-  border: 2px solid pink;
-  cursor: pointer;
-} */
-
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 .todo-list{
@@ -343,13 +337,6 @@
   margin: 4px;
 }
 
-#create {
-  padding: 4px;
-  border-radius: 4px;
-  border: 2px solid pink;
-  cursor: pointer;
-}
-
 .column_container{
   display: flex;
   flex-direction: column;
@@ -388,17 +375,10 @@
 }
 .addbtn{
   border-radius: 4px;
+  padding: 4px;
   border: 2px solid black;
   cursor: pointer;
   background-color: #FF7575;
-}
-
-#addproject{
-  border-radius: 4px;
-  border: 2px solid black;
-  cursor: pointer;
-  background-color: #FF7575;
-  
 }
 #new_project_box{
   border: 2px solid rgba(0, 0, 0, 0.5);
@@ -482,11 +462,6 @@
 .e_detail{
   width:100%;
   
-}
-#addexperience{
-  border-radius: 4px;
-  border: 2px solid pink;
-  cursor: pointer;
 }
 .e_info1{
   font-weight: 500;
