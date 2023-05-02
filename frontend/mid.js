@@ -683,10 +683,8 @@ let user = {
       '<input type="text" id="p_detail" placeholder="Detail..." class="in_box p_detail"value="' +
       info[3] +
       '"/></div>' +
-      '<div class = "button_container">'+
       '<button id="done" onclick=p_edit_done(this)>Save</button>' +
-      '<button id="delete" onclick=delete_parent(event);p_save();>Delete</button></div>'+
-      "</div>"
+      '<button id="delete" onclick=delete_parent(event);p_save();>Delete</button></div>'
     );
   }
   function p_edit_button(editbutton) {
@@ -824,10 +822,8 @@ let user = {
       '<input type="text" id="e_detail" placeholder="Detail..." class="in_box e_detail"value="' +
       info[5] +
       '"/></div>' +
-      '<div class = "button_container">'+
       '<button id="done" onclick=e_edit_done(this)>Save</button>' +
-      '<button id="delete" onclick=delete_parent(event);e_save();>Delete</button></div>'+
-      '</div>'
+      '<button id="delete" onclick=delete_parent(event);e_save();>Delete</button></div>'
     );
   }
   function e_edit_button(editbutton) {
