@@ -369,8 +369,7 @@
   font-size: 18px;;
 }
 .p_info2{
-  font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   /* align-self: center; */
 }
 .addbtn{
@@ -381,6 +380,7 @@
   background-color: #FF7575;
 }
 #new_project_box{
+  display: flex;
   border: 2px solid rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   padding: 4px;
@@ -388,9 +388,11 @@
   width:100%;
   height:128px;
   padding-bottom: 5px;
+  gap:4px;
 }
 .in_line{
   display: flex;
+  gap:4px;
 }
 .in_box{
   border-color: rgba(0, 0, 0, 0.5);
@@ -436,6 +438,8 @@
   border-radius: 8px;
 }
 .new_exp_box{
+  display: flex;
+  gap:4px;
   border: 2px solid rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   padding: 4px;
