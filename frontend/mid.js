@@ -499,7 +499,7 @@ let user = {
             method: "GET",
             credentials: "include",
         };
-        let response = await fetch("http://127.0.0.1:3000/user/getData",options);
+        let response = await fetch("http://34.235.250.54:3000/user/getData",options);
         console.log(response);
         let data = await response.json();
         user1 = data
