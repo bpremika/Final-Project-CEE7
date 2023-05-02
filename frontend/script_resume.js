@@ -149,10 +149,10 @@ function appendData(data){
         return `
             <span>
                 <div id="work_type">${work.employment_type}</div>
-                <div id="work_title">${work.title}</div>
+                <div id="work_title">${work.company_name}</div>
                 <div id="work_year">${work.start_year}-${work.end_year}</div>
             </span>
-            <div>${work.company_name}</div>
+            <div>${work.title}</div>
             <li>${work.description}</li>
         `;
     }).join('');

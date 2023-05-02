@@ -11,10 +11,10 @@ const createResume = async () => {
 }
 const getProfileInformation = async () => {
   const options = {
-    method: "PATCH",
+    method: "GET",
     credentials: "include",
   };
-  let res = await fetch(`http://${backendIPAddress}/user/updateUserData`,options);
+  let res = await fetch(`http://${backendIPAddress}/user/getUserData`,options);
   let data = await res.json();
   console.log(data);
   if (res.status == 200){

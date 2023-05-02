@@ -426,6 +426,10 @@ let user = {
     addTags("tools");
     addTags("others");
     addTags("framework");
+    p_load(user.projects);
+    e_load(user.work_experience);
+    console.log(user.work_experience);
+
   }
   
   async function Save() {
@@ -504,11 +508,11 @@ let user = {
     }
     console.log(user1)
     user = user1
-      educations = user.education.map((detail) => createRecord(detail));
-      object.lang.tags = user.language_skill.map(({ name, id }) => name)
-      object.framework.tags = user.framework_skill.map(({ name, id }) => name);
-      object.tools.tags = user.tools_skill.map(({ name, id }) => name);
-      object.others.tags = user.other_skill.map(({ name, id }) => name);
+    educations = user.education.map((detail) => createRecord(detail));
+    object.lang.tags = user.language_skill.map(({ name, id }) => name)
+    object.framework.tags = user.framework_skill.map(({ name, id }) => name);
+    object.tools.tags = user.tools_skill.map(({ name, id }) => name);
+    object.others.tags = user.other_skill.map(({ name, id }) => name);
   }
   
   function createRecord(detail) {
@@ -600,36 +604,36 @@ let user = {
       addElement(html_string, "existing_project_list", -1);
     }
   }
-  p_load(user.projects);
+ 
   
-  function p_save(info) {
+  async function p_save(info) {
     user.projects=[];
     p_list=document.getElementById("existing_project_list");
     for (let i = 0; i < p_list.childNodes.length; i++) {
-     p = p_list.children[i];
-      info=[];
-      //testinput=exp.querySelector('input');
-      if(p){if(p.querySelector('input')){
-        info=getAllInputText(p.id);
-      }
-      else if(!p.classList.contains('testt')){
-        info=p_datafix(getTextInDivs(p));
-      }
-      else{continue;}}
-      else{
-        continue;
-      }
-      user.projects.push({
-        
-          title: info[0],
-          year: info[1],
-          link: info[2],
-          detail: info[3],
-        
-      });
-      console.log(info);
+      p = p_list.children[i];
+        info=[];
+        //testinput=exp.querySelector('input');
+        if(p){if(p.querySelector('input')){
+          info=getAllInputText(p.id);
+        }
+        else if(!p.classList.contains('testt')){
+          info=p_datafix(getTextInDivs(p));
+        }
+        else{continue;}}
+        else{
+          continue;
+        }
+        user.projects.push({
+          
+            title: info[0],
+            year: info[1],
+            link: info[2],
+            detail: info[3],
+          
+        });
+        console.log(info);
     }
-    Save();
+    await Save();
     console.log("save done" +user.projects);
   }
   function p_new(info, id) {
@@ -725,9 +729,7 @@ let user = {
       addElement(html_string, "exp_list", -1);
     }
   }
-  e_load(user.work_experience);
-  console.log(user.work_experience);
-  function e_save() {
+  async function e_save() {
     user.work_experience=[];
     exp_list=document.getElementById("exp_list");
     for (let i = 0; i < exp_list.childNodes.length; i++) {
@@ -754,35 +756,32 @@ let user = {
       });
       console.log(info);
     }
-    Save();
+    await Save();
     console.log("save done" +user.work_experience);
   }
   function e_new(info, id) {
     return (
       '<div class="exp" id="e_' +
-      id +
-      '">' +
-      '<div style="display: flex;">'+
-      // '<div style = "display : flex ; justify-content : ">' +
-      '<div class="e_info1">' +
-      info[0] +
-      "</div>" +
-      '<div class="e_info2"><span>' +
-      '['+ info[1] +']' +
-      "</span></div>" +
-      '</div>'+
-      '<div class="e_info2">' +
-      info[2] +
-      "</div>"+
-      '<div class="e_info2">' +
-      info[5] +
-      "</div>"+
-      '<div class="e_info3">' +
-      info[3] +
-      " - " +
-      info[4] +
-      "</div>" +
-      '<i class="fa fa-edit editbutton" onclick=e_edit_button(this)></i></div>'
+    id +
+    '">' +
+    '<div class="e_info1">' +
+    info[0] +
+    "</div>" +
+    '<div class="e_info2">' +
+    info[1] +
+    "</div>" +
+    '<div class="e_info2">' +
+    info[2] +
+    "</div>"+
+    '<div class="e_info2">' +
+    info[5] +
+    "</div>"+
+    '<div class="e_info3">' +
+    info[3] +
+    " - " +
+    info[4] +
+    "</div>" +
+    '<i class="fa fa-edit editbutton" onclick=e_edit_button(this)></i></div>'
     );
     //'<button class="edit_button" onclick=e_edit_button(this)>Edit</button>
   }

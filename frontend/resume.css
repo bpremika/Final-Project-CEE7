@@ -35,6 +35,15 @@ ul {
         font-size: 12px;
     }
 }
+@media screen and (max-width: 900px){
+    .resumePage #name ,.resumePage #nickname-resume{
+        font-size: 20px;
+      }
+      .resumePage #contact,.resumePage #link-work a{
+        font-size: 12px;
+      }
+  }
+
 .container {
     display:flex;
     justify-content: space-between;
@@ -109,7 +118,7 @@ a {
 }
 #lang-skill, #framework-skill, #tools-skill, #other-skill{
     position: absolute;
-    left : 25%
+    left : 23%
 }
 #work_title {
     display: flex;

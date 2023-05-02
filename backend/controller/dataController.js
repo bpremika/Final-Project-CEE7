@@ -130,6 +130,7 @@ exports.updateUserData = async (req, res) => {
                 "detail" : item.detail ?? "",
             }}) : []
         const Items = {
+
                 "firstname": data.firstname ?? user.firstname_en,
                 "lastname": data.lastname ?? user.lastname_en,
                 "nickname": data.nickname,
