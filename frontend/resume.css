@@ -1,13 +1,3 @@
-
-/* *{
-    margin: 2;
-    width: 50;
-    box-sizing: border-box;
-    font-family: 'IBM Plex Sans Thai', sans-serif; 
-} */
-/* body{
-    background-color: #f0f3f5;
-} */
 .resumePage{
     background-color: white;
     display: block;
@@ -21,12 +11,6 @@
 ul {
     margin-left: 25px;
 }
-/* .resumePage[size = "A4"]{
-    width: 21cm;
-    height: 29.7cm;
-    overflow: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} */
 @media print {
     .resumePage #name ,.resumePage #nickname-resume{
       font-size: 25px;

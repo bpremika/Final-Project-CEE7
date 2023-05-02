@@ -7,7 +7,7 @@ async function getData(){
         let response = await fetch("http://34.235.250.54:3000/user/getData",options);
         console.log(response);
         let data = await response.json();
-        // console.log(data.nickname);
+        
         appendData(data);
     }catch(err){
         console.log(err);
@@ -59,26 +59,6 @@ function appendData(data){
     var pother =  document.createElement("span");
     pother.textContent = appendAllSkill(data.other_skill)
     other.appendChild(pother)
-    // var educationPart = document.getElementById('education');
-    // for(let i = 0; i < data.education.length;i++){
-    //     var li = document.createElement("li")
-    //     var span1 = document.createElement("span")
-    //     var span2 = document.createElement("span")
-    //     span1.id = "head-education"
-    //     span1.textContent = data.education[i].degree + " " + data.education[i].field_of_study
-    //     li.append(span1)
-    //     if(data.education[i].graduation_year < new Date().getFullYear()){
-    //         span2.textContent =` ${data.education[i].university_name}, ${data.education[i].start_year}-${data.education[i].graduation_year} `
-    //         li.append(span2)
-    //     }else{
-    //         span2.textContent = ` ${data.education[i].university_name}, ${data.education[i].start_year}- Present`
-    //         let div = document.createElement("div")
-    //         div.textContent = `Expected graduation date ${data.education[i].graduation_year}`
-    //         li.append(span2)
-    //         li.append(div)
-    //     } 
-    //     educationPart.appendChild(li)
-    // }
     var educationPart = document.getElementById('education');
     educationPart.innerHTML = data.education.map((edu) => {
         let span2;
@@ -91,24 +71,6 @@ function appendData(data){
         }
         return `<li><span id="head-education">${edu.degree} ${edu.field_of_study}</span>${span2}</li>`;
     }).join('');
-    // var ProjectPart = document.getElementById("projects");
-    // for(let i = 0;i < data.projects.length;i++){
-    //     var nameProject = document.createElement("div");
-    //     var year = document.createElement("div");
-    //     var span = document.createElement("span");
-    //     var detail = document.createElement("li");
-    //     var link = document.createElement("a");
-    //     nameProject.textContent = data.projects[i].title
-    //     year.textContent = data.projects[i].year
-    //     detail.textContent = data.projects[i].detail
-    //     link.textContent = data.projects[i].link
-    //     link.href = data.projects[i].link
-    //     span.appendChild(nameProject);
-    //     span.appendChild(year);
-    //     ProjectPart.appendChild(span);
-    //     ProjectPart.appendChild(detail);
-    //     ProjectPart.appendChild(link);
-    // }
     var ProjectPart = document.getElementById("projects");
     ProjectPart.innerHTML = data.projects.map((project) => {
         return `
@@ -120,30 +82,6 @@ function appendData(data){
             <a href="${project.link}">${project.link}</a>
         `;
     }).join('');
-
-    // var WorkPart = document.getElementById("work_experience");
-    // for(let i = 0;i < data.work_experience.length;i++){
-    //     var title = document.createElement("div");
-    //     var type = document.createElement("div");
-    //     var company = document.createElement("div");
-    //     var span = document.createElement("span");
-    //     var detail = document.createElement("li");
-    //     var year = document.createElement("div");
-    //     title.id = "work_title"
-    //     type.id = "work_type"
-    //     year.id = "work_year"
-    //     title.textContent = data.work_experience[i].title
-    //     type.textContent = data.work_experience[i].employment_type
-    //     detail.textContent = data.work_experience[i].description        
-    //     company.textContent = data.work_experience[i].company_name
-    //     year.textContent = `${data.work_experience[i].start_year}-${data.work_experience[i].end_year}`
-    //     span.appendChild(type);
-    //     span.appendChild(title);
-    //     span.appendChild(year)
-    //     WorkPart.appendChild(span);
-    //     WorkPart.appendChild(company);
-    //     WorkPart.appendChild(detail);
-    // }
     var WorkPart = document.getElementById("work_experience");
     WorkPart.innerHTML = data.work_experience.map((work) => {
         return `
@@ -165,6 +103,3 @@ function appendAllSkill(Skill) {
     }
     return listSkill
 }
-// document.addEventListener("DOMContentLoaded", function() {
-//     getData();
-// });
