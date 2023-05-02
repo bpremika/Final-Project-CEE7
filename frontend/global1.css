@@ -379,6 +379,23 @@
   cursor: pointer;
   background-color: #FF7575;
 }
+
+.button_container{
+  display: flex;
+  flex-direction: row;
+  gap:4px;
+}
+
+#done{
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  background-color: #7DEF81;
+}
+
+#delete{
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
 #new_project_box{
   display: flex;
   border: 2px solid rgba(0, 0, 0, 0.5);
